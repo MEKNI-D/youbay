@@ -1,0 +1,32 @@
+
+  <ion-view title="My Shopping Cart" ng-controller="myShoppingCartCtrl">
+ <ion-content  >
+
+      <!-- The list directive is great, but be sure to also checkout the collection repeat directive when scrolling through large lists -->
+      <h4 style="color:#800000"><b> You have {{myproducts.length}} Items   <span style="float:right"><i class="icon ion-ios-cart"></i> Total : {{total() | currency}}</span> </b> </h4>
+        <a href="#/app/productsOrder/{{total() | currency}}" style="text-decoration:none"><b>PURCHASE NOW</b></a>
+      <ion-list show-delete="data.showDelete" show-reorder="data.showReorder" ng-repeat="product in myproducts">
+  <ion-item   href="" class="item-remove-animate">
+<table>
+   <tr style="border-bottom:1px black solid" >
+               
+        <td  style="width:200px" >    <img src="{{product.product_Image}}" width="100px" height="100px"> 
+            
+                   <h2 ng-model="name"><b>{{product.product_Name}}</h2>
+ <p style="color:#006633"> Price ($):<input type="number"   placeholder="Price" ng:model="product.product_Price" max="{{product.product_Price}}" min="{{product.product_Price}}"> </p>
+    </td>
+    <td>   
+        <b style="color:#800000">Quantity:</b><input type="number"  style="background-color:#E8E8E8 " ng:model="product.product_Quantity"   min="1" max="{{product.product_Quantity}}" >
+  <i class="icon ion-ios-cart"></i><b style="color:#800000">Total price: {{product.product_Price * product.product_Quantity | currency}}</b></td>  
+    <td><br/>
+      REMOVE[<a href ng:click="removeItem($index)">X</a>]
+            </td>
+   </tr>
+     </table>
+             
+    </ion-item>
+       <a ng-href="#/app/OrderQuantity/{{product.id_Product}}/{{product.product_Quantity}}" style="text-decoration:none">Order your quantity</a>
+            </ion-list>
+    </ion-content>
+      
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view view-title="My Products">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="content has-header" style="margin-top:50px;">
+            <span style="font-size:20px; colot:#C8C8C8; margin-left:20px;" ui-sref="app.addProduct"> Add new Product</span><i class="icon ion-plus-circled muted" style="width:20px;height 10px;" ui-sref="addProduct"></i>
+            
+            <div class="list animate-fade-slide-in-left" ng-repeat="product in products">
+                <a href="#/app/profile" class="item item-avatar item-icon-right">
+                    <img src="{{product.product_Image}}" style="margin-right:50px;">
+                    <h2 style="margin-right:50px;">{{product.product_Name}}</h2>
+                    <p style="margin-right:50px;">{{product.product_Description}}</p>
+                    <i class="icon ion-edit muted" ui-sref="app.updateProduct({id:product.id_Product,name:product_Name,
+                       desc:product_Description,
+                       tag:product_Tag,
+                       price:product_Price,
+                       qte:product_Quantity})" style="width:8px;height:2px;top:30px; right:80px;"></i>
+                    <i class="icon ion-trash-a muted" style="width:8px;height:2px;top:30px; right:30px;" ui-serf="app.removeProduct($index)"></i>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

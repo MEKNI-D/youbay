@@ -1,0 +1,15 @@
+<ion-view view-title="Deals">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="content has-header">
+            <div class="list animate-fade-slide-in-left">
+                <a href="#/app/profile" class="item item-avatar item-icon-right " ng-repeat="deal in deals">
+                    <img src="/img/logo.png">
+                    <h2>{{deal.deal_Status}}</h2>
+                    <p> </p>
+                    <i class="icon ion-chatbubble muted"></i>
+                </a>
+            </div>
+        </div></br></br></br>
+        <button ui-sref="app.AddDeals" class="button button-positive button-block "> Add a Deal</button>
+    </ion-content>
+</ion-view>

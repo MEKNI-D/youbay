@@ -1,0 +1,61 @@
+<ion-view view-title="Logout">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/profile-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/daenerys.jpg');"></div>
+                <h3><a class="light">{{user.first_Name}}</a></h3>
+                <h4>{{user.lastName}}</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.products" class="tab-item">
+                <i class="icon ion-ios-albums-outline"></i> Products
+            </a>
+            <a ui-sref="app.deals" class="tab-item">
+                <i class="icon ion-social-usd"></i> Deals
+            </a>
+            <a ui-sref="app.ShoppingCart" class="tab-item">
+                <i class="icon ion-android-cart"></i> Shopping Cart
+            </a>
+            <a ui-sref="app.profile" class="tab-item">
+                <i class="icon ion-person"></i> My Profile
+            </a>
+        </div>
+        <h4 class="content padding double-padding-x"><strong>Welcome  <span>{{user.lastName}},</span></strong></h4>
+        <div class="list animate-fade-slide-in-right">
+            
+            <p class="content padding double-padding-x" 
+               style="font-size:18px;line-height:22px;">
+            
+                We missed you ! I hope we can help you what you are looking for today.
+            
+            </p>
+            
+            
+          <i class="ion-ios-location" style="margin-left:15px;">  Contact Us</i>  
+      
+            
+            
+
+            <!--<a ui-sref="app.friends" class="item item-avatar item-icon-right">
+                <img src="img/jon-snow.jpg">
+                <h2>Deal 1</h2>
+                <p>Da illest illegitimate</p>
+                <i class="icon ion-chatbubble muted"></i>
+            </a>
+            <a ui-sref="app.friends" class="item item-avatar item-icon-right">
+                <img src="img/sansa.jpg">
+                <h2>Deal 2k</h2>
+                <p>&amp; Joffrey <strike>sitting</strike> sat in a tree</p>
+                <i class="icon ion-chatbubble muted"></i>
+            </a>
+            <a ui-sref="app.friends" class="item item-avatar item-icon-right">
+                <img src="img/tyrion.jpg">
+                <h2>Deal 3</h2>
+                <p>B.A.M.F. imp</p>
+                <i class="icon ion-chatbubble muted"></i>
+            </a>-->
+        </div>
+        <div id="map" data-tap-disabled="true" style="margin-left:100px;"></div>
+    </ion-content>
+</ion-view>

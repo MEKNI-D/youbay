@@ -1,0 +1,23 @@
+<ion-view title="Product Details">
+    <ion-content padding="true" class="has-header">
+        <ion-list></ion-list>
+        
+        <h3>{{product.product_Name}}</h3>
+        <p>{{product.product_Description}}</p>
+        <p>{{product.product_Price}}</p>
+        <input type="hidden" ng-model="LineItem.product_Id" ng-value={{product.product_Id}}>
+        <div style="line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; width: 100%; height: auto; background-color: rgb(255, 255, 255);">
+<!--
+            <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+-->
+            <img src="{{product.product_Image}}" style="vertical-align: middle; width:350px; height:350px;">
+        </div>
+       <div class="button-bar">
+            <button class="button button-balanced button-block  icon ion-android-cart" ng-submit="addToShop()">add to shopping cart</button>
+<!--
+           <a href="#/app/addToShop">addddddddddddd</a>
+-->
+        </div>
+        <button class="button button-positive button-block " >Go to Shopping Cart</button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,62 @@
+<!--
+<form class="form-horizontal" role="form" ng-submit="updateProduct(id_Product,product_Name,roduct_Description,product_Tag,product_Price,product_Quantity)">
+-->
+   <!-- {product.id_Product},{product.product_Name},{product.product_Description},{product.product_Tag},{product.product_Price},{product.product_Quantity}-->
+ <!-- <div ng-include="'templates/form.html'"></div>
+</form>-->
+
+<ion-view title="Add-Product">
+    <ion-content padding="true" class="has-header">
+    <ion-list>
+<div class="list">
+  <label class="item item-input muted" style="margin-bottom:-13px; margin-top:10px;">Product Name :
+    </label>
+    
+    <input type="text" ng-model="product.product_Name" placeholder="Product Name" name="name" style="margin-left:14px;width:330px;">
+  
+  <label class="item item-input muted" style="margin-bottom:-13px;"> Product Description :</label>
+    <input type="text" ng-model="product.product_Description" placeholder="Product Description" style="margin-left:14px;width:330px;">
+  
+  <label class="item item-input muted" style="margin-bottom:-13px;"> Product Tag</label>
+<input type="text" ng-model="product.product_Tag" placeholder="Product Tag" style="margin-left:14px;width:330px;">
+  
+    <label class="item item-input muted" style="margin-bottom:-13px;">Product Price</label>
+<input type="text" ng-model="product.product_Price" placeholder="Product Price" style="margin-left:14px;width:330px;">
+  
+    <label class="item item-input muted" style="margin-bottom:-13px;">Product Quantity :</label>
+<input type="text" ng-model="product.product_Quantity" placeholder="Product Quantity" style="margin-left:14px;width:330px;">
+  
+      <label class="item item-input muted" style="margin-bottom:-13px;">Product Image :</label>
+  <div class="item item-input-inset">
+    
+      
+      <input type="text" ng-model="product.product_Image" placeholder="Product Image">
+    
+    <button class="button button-small" style="left:30px;">
+      Browse
+    </button>
+        
+  </div>
+    <div class="list" style=" width : 355px; bottom:0px;">
+    <label class="item item-input item-select" style="margin-bottom:-13px;">
+        <div class="input-label muted">Category :</div>
+            <select style="margin-right:15px;">
+                <option>...</option>
+                <option ng-model="product.category" ng-repeat="category in categories">{{category.category_Name}}</option>
+            </select>
+  </label>
+  </div>
+  
+    
+    <div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+<!--
+    <input type="submit" class="button button-small" value="Save" style="height:10px;left:130p;"/>
+-->
+      <a href="#/app/updateProduct/{{product.id_Product}}/{{product.product_Name}}/{{product.product_Description}}/{{product.product_Tag}}/{{product.product_Price}}/{{product.product_Quantity}}">Edit</a>
+  </div>
+</div>
+</div>
+</ion-list>
+    </ion-content>
+</ion-view>

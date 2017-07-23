@@ -1,0 +1,37 @@
+<ion-view title="SignupBusiness">
+    <ion-content style="background: url(img/login.jpg) center; background-size: cover;">
+        <form class="list">
+           <ion-list>
+                <label class="item item-input" name="address">
+                    <span class="input-label">address</span>
+                    <input type="text" placeholder="address" ng-model="address">
+                </label>
+                <label class="item item-input" name="email">
+                    <span class="input-label">email</span>
+                    <input type="text" placeholder="esmail" ng-model="email">
+                </label>
+                <label class="item item-input" name="first_Name">
+                    <span class="input-label">first_Name</span>
+                    <input type="text" placeholder="first_Name" ng-model="first_Name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">lastName</span>
+                    <input type="text" placeholder="lastName" ng-model="lastName">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">phone</span>
+                    <input type="text" placeholder="phone" ng-model="phone">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">login</span>
+                    <input type="text" placeholder="login" ng-model="login">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">password</span>
+                    <input type="password" placeholder="Password" ng-model="password">
+                </label>
+            </ion-list>
+            <button class="button button-positive button-block " ng-click="add(address,email,first_Name,lastName,login,password,phone)">Sign up</button>
+        </form>
+    </ion-content>
+</ion-view>

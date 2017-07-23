@@ -1,0 +1,46 @@
+<ion-view view-title="Profile">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/profile-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/daenerys.jpg');"></div>
+                <h3><a class="light">{{c.currentUser.first_Name}}</a></h3>
+                <h4>{{currentUser.address}}</h4>
+            </div>
+        </div>
+       
+        <h4 class="content padding double-padding-x"><strong>Hello :</strong> {{currentUser.c.first_Name}}</h4>
+        <form class="list">
+            <ion-list>
+                <label class="item item-input" >
+                    <span class="input-label"><strong>First Name: </strong></span>
+                    <p ng-model="customer.first_Name">{{currentUser.c.first_Name}}</p>
+                </label>
+                <label class="item item-input" >
+                    <span class="input-label"><strong>Last Name </strong></span>
+                    <p  ng-model="customer.lastName">{{currentUser.c.lastName}}</p>
+                </label>
+                <label class="item item-input" >
+                    <span class="input-label"><strong>Email address :</strong></span>
+                    <p  ng-model="customer.email">{{currentUser.c.email}}</p>
+                </label>
+                <label class="item item-input" >
+                    <span class="input-label"><strong>Address :</strong></span>
+                    <p ng-model="customer.address">{{currentUser.c.address}}</p>
+                </label>
+                <label class="item item-input" >
+                    <span class="input-label"><strong>Phone :</strong></span>
+                    <p ng-model="customer.phone">{{currentUser.c.phone}}</p>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label"><strong>Username :</strong></span>
+                    <p type="text" placeholder="Username" ng-model="a">{{currentUser.c.login}}</p>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label"><strong>Password :</strong></span>
+                    <p type="text" placeholder="Password" ng-model="e">{{currentUser.c.password}}</p>
+                </label>
+            </ion-list>
+            <button class="button button-positive button-block " ng-click="updateCustomer()">update</button>
+        </form>
+    </ion-content>
+</ion-view>

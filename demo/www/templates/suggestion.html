@@ -1,0 +1,31 @@
+<ion-view view-title="Suggest A Category">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="content has-header">
+            <div class="list animate-fade-slide-in-right">
+                <!--<a href="#/app/profile" class="item item-avatar item-icon-right">
+                    <img src="img/jon-snow.jpg">
+                    <h2>Jon Snow</h2>
+                    <p>Da illest illegitimate</p>
+                    <i class="icon ion-edit muted"></i>
+                </a>-->
+            </div>
+            <div>
+            <p>Last suggestion's status :
+                <strong>Awaiting Response...</strong>
+            </p>
+        </div>
+        <div class="spacer" style="width: 300px; height: 36px;"></div>
+        <form class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="category's name" ng-model="name">
+            </label>
+        </form>
+        <!--<button class="button button-stable button-icon button-block button-large button-full">Submit</button>--> 
+        <button ng-click="suggestCategory(name)" class="button button-stable button-icon button-block button-large button-full">
+            <i class="icon ion-plus"></i>
+        </button>
+            <h2 style="color:green;font-size:15px;">{{status}}</h1>
+            
+        </div>
+    </ion-content>
+</ion-view>

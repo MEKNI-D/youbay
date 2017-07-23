@@ -1,0 +1,31 @@
+<ion-view view-title="Sales">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="content has-header">
+            <div class="list animate-fade-slide-in-right">
+                <!--<a href="#/app/profile" class="item item-avatar item-icon-right">
+                    <img src="img/jon-snow.jpg">
+                    <h2>Jon Snow</h2>
+                    <p>Da illest illegitimate</p>
+                    <i class="icon ion-edit muted"></i>
+                </a>-->
+            </div>
+            
+            <div class="card">
+                <div class="item item-divider">
+                    Product Sales
+                </div>
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true" series="series" options="{showTooltips: false}"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        <canvas id="bar" class="chart chart-bar" data="data" labels="labels" legend="true" series="series" options="{showTooltips: false}"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </ion-content>
+</ion-view>

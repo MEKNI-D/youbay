@@ -1,0 +1,17 @@
+
+
+  <ion-view title="YouBay" >
+= <ion-content>
+     <!-- The list directive is great, but be sure to also checkout the collection repeat directive when scrolling through large lists -->
+      <h4 ng-model="order.total">Order amount: {{ total}}</h4>
+     
+   <form class="form-horizontal" role="form"  ng-submit="addOrder()">
+      <b>Shipping To:</b>  <textarea style="background-color:#C8C8C8 " ng-model="order.ship_to" ></textarea>
+        <b>Expected shipping date :  </b><input  style="background-color:#C8C8C8" ng-model="order.shipped" type="date" />
+          <input type="hidden" ng-value="{{date | date:'yyyy-MM-dd'}}"  ng-model="order.ordered"/>
+             <input type="submit" class="button button-small" value="Buy it Now" style="height:10px;left:130p;"/>
+         
+        </form>
+    </ion-content>
+      
+</ion-view>
